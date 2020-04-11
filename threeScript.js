@@ -3,7 +3,7 @@ var  renderer = new THREE.WebGLRenderer({canvas: document.getElementById("threev
 
 //===================================================== scene
 var scene = new THREE.Scene();
-scene.background = new THREE.Color( 0xf2f2f2 );
+scene.background = new THREE.Color( 0xeeeeee );
 
 //===================================================== camera
 const  camera = new THREE.PerspectiveCamera(50, 2, .1, 1000);
