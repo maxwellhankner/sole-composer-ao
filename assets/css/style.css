@@ -1,0 +1,125 @@
+html, body {
+    margin: 0px;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Three View -------------------------------------------------------------------- */
+
+.threeview-container{
+    width: 100%;
+    height: 100%;
+}
+
+#threeview {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#texture{
+    display: none;
+    width: 100%;
+}
+
+/* Upper Interface -------------------------------------------------------------------- */
+.upper-interface {
+    position: fixed;
+    width: 100%;
+    height: 50%;
+}
+
+/* Image asset container */
+.images-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    display: none;
+}
+.preload-images {
+    width: 100%;
+}
+
+.final-texture-container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Final Texture */
+.canvas-style {
+    width: 100%;
+}
+
+/* Selection Banner */
+.selection-banner {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 9%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.selection-banner button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+.selection-label {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.selection-label p {
+    margin: 0;
+    text-align: center;
+}
+
+/* Lower Interface -------------------------------------------------------------------- */
+.lower-interface {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #ddd;
+}
+
+.graphic-buttons{
+    position: fixed;
+}
+
+.graphic-selection{
+    height: 100%;
+}
+
+/* Color or Graphic */
+.selection-option p {
+    text-align: center;
+}
+
+.color-selection {
+    display: none;
+}
+
+.graphic-selection {
+    display: none;
+}
+
+/* Selection Texture */
+.selection-texture {
+    height: 100%;
+    width: 100%;
+}
+
+#tempcanvas {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
