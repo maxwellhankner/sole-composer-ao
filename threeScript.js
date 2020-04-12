@@ -3,7 +3,7 @@ var  renderer = new THREE.WebGLRenderer({canvas: document.getElementById("threev
 
 //===================================================== scene
 var scene = new THREE.Scene();
-scene.background = new THREE.Color( 0xeeeedd );
+scene.background = new THREE.Color( 0xf1f1f1 );
 
 //===================================================== camera
 const  camera = new THREE.PerspectiveCamera(50, 2, .1, 1000);
@@ -31,18 +31,25 @@ controls.enablePan = false;
 controls.update();
 
 //===================================================== canvas texture
+var aoimg = new Image();
+aoimg.src = 'assets/images/ao_diffuse.png';
+var ao = new THREE.CanvasTexture(aoimg);
+ao.flipY = false;
+
 var ctx = document.getElementById('texture').getContext('2d');
 ctx.fillStyle = "#fff";
 ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-var shadowimg = new Image();
-shadowimg.src = 'assets/images/white_diffuse.png';
-shadowimg.onload = function () {
-  ctx.drawImage(shadowimg, 0, 0, ctx.canvas.width, ctx.canvas.height);
+var diffuseimg = new Image();
+diffuseimg.src = 'assets/images/white_diffuse.png';
+diffuseimg.onload = function () {
+  ctx.drawImage(diffuseimg, 0, 0, ctx.canvas.width, ctx.canvas.height);
 }
+
 var texture = new THREE.CanvasTexture(ctx.canvas);
 texture.flipY = false;
 var newMaterial = new THREE.MeshStandardMaterial({
   map: texture,
+  aoMap: ao
 });
 
 //===================================================== model
