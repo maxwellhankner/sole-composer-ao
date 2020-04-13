@@ -1,5 +1,6 @@
 html, body {
     margin: 0px;
+    touch-action: manipulation;
 }
 
 /* Main Container */
