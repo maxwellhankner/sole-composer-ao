@@ -8,6 +8,8 @@ var selectionLabel = $('.selection-label');
 var selectNext = $('#next-selection');
 var selectLast = $('#last-selection');
 
+var backButton = $('.back-to-main');
+
 // Initialize
 colorPicker = $('#color-picker');
 var currentColor = "#" + layersArray[currentPartIndex].color;
@@ -33,6 +35,10 @@ selectLast.click(function(){
     }
     viewToSelectionSpecifications()
     showColorGraphicView()
+})
+
+backButton.click(function(){
+    showColorGraphicView();
 })
 
 // Part interface change function

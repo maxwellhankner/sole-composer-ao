@@ -8,7 +8,12 @@ html, body {
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+button {
+    font-family: 'Inter', 'Roboto', sans-serif;
 }
 
 /* Three View -------------------------------------------------------------------- */
@@ -87,11 +92,47 @@ p {
     bottom: 0;
     width: 100%;
     height: 50%;
-    background-color: #ddd;
+    background-color: #333;
+    color: #ddd;
 }
 
 .graphic-buttons{
-    position: fixed;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 3fr 1fr 1fr;
+    z-index: 1;
+    grid-template-areas: 
+    "compress . up . expand"
+    ". . . . ."
+    "left . . . right"
+    ". . . . ."
+    "clock . down . counter"
+    ". reset . back .";
+}
+
+button > * {
+    pointer-events: none;
+}
+
+#left-button {grid-area: left;}
+#right-button {grid-area: right;}
+#up-button {grid-area: up;}
+#down-button {grid-area: down;}
+#rotate-left-button {grid-area: counter;}
+#rotate-right-button {grid-area: clock;}
+#scale-up-button {grid-area: expand;}
+#scale-down-button {grid-area: compress;}
+#reset-button {grid-area: reset;}
+#back-button {grid-area: back;}
+
+.graphic-edit-button {
+    background-color: #00000077;
+    color: #ddd;
+    border: none;
+    border-radius: 30px;
 }
 
 .graphic-selection{
@@ -103,8 +144,28 @@ p {
     text-align: center;
 }
 
+/* Color Selection */
 .color-selection {
-    display: none;
+    display: block;
+}
+.color-selection-button {
+    display: flex;
+    justify-content: center;
+}
+#color-picker {
+    width: 50%;
+    height: 30px;
+    border: none;
+    background-color: #333;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.interface-button {
+    height: 40px;
+    border: none;
+    background-color: #333;
+    color: #ddd;
+    font-size: 18px;
 }
 
 .graphic-selection {
@@ -113,6 +174,8 @@ p {
 
 /* Selection Texture */
 .selection-texture {
+    position: absolute;
+    top: 0;
     height: 100%;
     width: 100%;
 }
