@@ -106,11 +106,11 @@ button {
     grid-template-rows: 1fr 3fr 1fr 3fr 1fr 1fr;
     z-index: 1;
     grid-template-areas: 
-    "compress . up . expand"
+    "counter . up . clock"
     ". . . . ."
     "left . . . right"
     ". . . . ."
-    "clock . down . counter"
+    "compress . down . expand"
     ". reset . back .";
 }
 
