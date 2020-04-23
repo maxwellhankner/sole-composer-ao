@@ -236,6 +236,17 @@ var layersArray = [
         y: 0,
         scale: 500,
         rotation: 0
+    },
+    {
+        part: 'outer overlay',
+        mask: outerSwoosh,
+        isColor: false,
+        graphic: 'spongebob.png',
+        color: 'ffffff',
+        x: 0,
+        y: 0,
+        scale: 500,
+        rotation: 0
     }
 ]
 

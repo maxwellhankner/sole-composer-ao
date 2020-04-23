@@ -1,7 +1,7 @@
 // Selection Banner
 var currentPartIndex = 0;
 
-var selectionLabels = ['OUTER SWOOSH', 'INNER SWOOSH', 'OUTER QUARTER', 'INNER QUARTER', 'OUTER HEEL', 'INNER HEEL', 'OUTER SOLE', 'INNER SOLE', 'SOLE', 'TOE BOX', 'TOE CAP', 'LACE', 'LACE CAGE', 'LACE LOCK', 'TONGUE', 'HEEL WING', 'HEEL TAB', 'SOCK LINER'];
+var selectionLabels = ['OUTER SWOOSH', 'INNER SWOOSH', 'OUTER QUARTER', 'INNER QUARTER', 'OUTER HEEL', 'INNER HEEL', 'OUTER SOLE', 'INNER SOLE', 'SOLE', 'TOE BOX', 'TOE CAP', 'LACE', 'LACE CAGE', 'LACE LOCK', 'TONGUE', 'HEEL WING', 'HEEL TAB', 'SOCK LINER', 'OUTER OVERLAY'];
 
 var selectionLabel = $('.selection-label');
 
@@ -16,7 +16,7 @@ var currentColor = "#" + layersArray[currentPartIndex].color;
 viewToSelectionSpecifications();
 
 selectNext.click(function(){
-    if (currentPartIndex === 17) {
+    if (currentPartIndex === 18) {
         currentPartIndex = 0;
     }
     else {
@@ -28,7 +28,7 @@ selectNext.click(function(){
 
 selectLast.click(function(){
     if (currentPartIndex === 0) {
-        currentPartIndex = 17;
+        currentPartIndex = 18;
     }
     else {
         currentPartIndex -= 1;
